@@ -54,10 +54,13 @@ class Block
         {
 		$attr = array_merge( [
 			'textAlign'     => '',
-			'poweredByType' => ''
+			'poweredByType' => 'default'
 		], $attr );
 
-		$align = 'left';
+		// Build text align class.
+		$align = empty( $attr['textAlign'] )
+		         ? ''
+			 : "has-text-align-{$attr['textAlign']}";
 
 		// Return the formatted block output.
                 return sprintf(
