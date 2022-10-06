@@ -6,7 +6,7 @@
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2022, Justin Tadlock
- * @link      https://github.com/x3p0-dev/x3p0-comments-title
+ * @link      https://github.com/x3p0-dev/x3p0-powered-by
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -21,7 +21,10 @@ class Block
          *
          * @since 1.0.0
          */
-        public function __construct( protected string $path ) {}
+        public function __construct(
+		protected string $path,
+		protected Superpower $superpower
+	) {}
 
         /**
          * Boots the component, running its actions/filters.
@@ -43,6 +46,12 @@ class Block
                 register_block_type( $this->path . '/public', [
                         'render_callback' => [ $this, 'render' ]
                 ] );
+
+		wp_localize_script(
+			generate_block_asset_handle( 'x3p0/powered-by', 'editorScript' ),
+			'x3p0PoweredBy',
+			[ 'messages' => $this->superpower->messages() ]
+		);
         }
 
 	/**
@@ -54,7 +63,7 @@ class Block
         {
 		$attr = array_merge( [
 			'textAlign'     => '',
-			'poweredByType' => 'default'
+			'poweredByType' => ''
 		], $attr );
 
 		// Build text align class.
@@ -68,7 +77,7 @@ class Block
                         get_block_wrapper_attributes( [
                                 'class' => esc_attr( $align )
                         ] ),
-			esc_html( ( new Superpower( $attr['poweredByType'] ) )->text() )
+			esc_html( $this->superpower->text( $attr['poweredByType'] ) )
                 );
         }
 }

@@ -4,7 +4,7 @@
  *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2022, Justin Tadlock
- * @link      https://github.com/x3p0-dev/x3p0-comments-title
+ * @link      https://github.com/x3p0-dev/x3p0-powered-by
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
@@ -24,7 +24,8 @@ function plugin( string $abstract = '' ): mixed
 	if ( [] === $bindings ) {
 		$bindings = [
 			'block' => new Block(
-                                untrailingslashit( __DIR__ . '/..' )
+                                untrailingslashit( __DIR__ . '/..' ),
+				new Superpower()
                         )
 		];
 

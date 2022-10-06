@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       X3P0 - Powered By...
  * Plugin URI:        https://github.com/x3p0-dev/x3p0-powered-by
- * Description:       Random "powered by" message block.
+ * Description:       A block that generates a random "Powered by" message. It is meant to replace the typical "Powered by Theme/WordPress" message in footers but can be used anywhere.
  * Version:           1.0.0-alpha
  * Requires at least: 5.9
  * Requires PHP:      8.0
@@ -14,7 +14,7 @@
 
 namespace X3P0\PoweredBy;
 
-// Autoload classes and files.
+// Load classes and files.
 require_once 'src/Block.php';
 require_once 'src/Superpower.php';
 require_once 'src/functions-helpers.php';

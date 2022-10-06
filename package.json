@@ -1,6 +1,6 @@
 {
 	"name": "x3p0-powered-by",
-	"version": "1.0.0-alpha",
+	"version": "1.0.0",
 	"description": "Displays a random powered-by message.",
 	"author": "justintadlock",
 	"homepage": "https://x3p0.com",
@@ -21,6 +21,7 @@
 		"@wordpress/block-editor": "^8.5.1",
 		"@wordpress/blocks": "^11.5.1",
 		"@wordpress/components": "^19.8.0",
+		"@wordpress/element": "^4.17.0",
 		"@wordpress/i18n": "^4.6.0",
 		"@wordpress/icons": "^8.2.0",
 		"classnames": "^2.3.1"

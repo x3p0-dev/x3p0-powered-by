@@ -10,39 +10,23 @@
 
 namespace X3P0\PoweredBy;
 
-use Stringable;
-
-class Superpower implements Stringable
+class Superpower
 {
+	/**
+	 * Holds the potential messages.
+	 *
+	 * @since 1.0.0
+	 */
+	protected array $messages = [];
+
 	/**
 	 * Sets the initial object state.
 	 *
 	 * @since 1.0.0
 	 */
-	public function __construct( protected string $type = '' ) {}
+	public function __construct() {
 
-	/**
-	 * Returns the message.
-	 *
-	 * @since 1.0.0
-	 */
-	public function text(): string
-	{
-		$collection = 'emoji' === $this->type
-		              ? $this->emojiMessages()
-			      : $this->messages();
-
-		return $collection[ array_rand( $collection, 1 ) ];
-	}
-
-	/**
-	 * Returns the default messages.
-	 *
-	 * @since 1.0.0
-	 */
-	public function messages(): array
-	{
-		return [
+		$this->messages['default'] = [
 			__( 'Powered by heart and soul.', 'x3po-powered-by' ),
 			__( 'Powered by crazy ideas and passion.', 'x3po-powered-by' ),
 			__( 'Powered by the thing that holds all things together in the universe.', 'x3po-powered-by' ),
@@ -59,41 +43,49 @@ class Superpower implements Stringable
 			__( 'Powered by an old mixtape and memories of lost love.', 'x3po-powered-by' ),
 			__( 'Powered by thoughts of old love letters.', 'x3p-powered-by' )
 		];
-	}
 
-	/**
-	 * Returns the emojified messages.
-	 *
-	 * @since 1.0.0
-	 */
-	public function emojiMessages(): array
-	{
-		return [
+		// @todo Come up with emoji equivalents for the messages that
+		// are commented out.
+		$this->messages['emoji'] = [
 			__( 'Powered by ❤️ and soul.', 'x3po-powered-by' ),
-			__( 'Powered by crazy 💡 and passion.', 'x3po-powered-by' ),
-			__( 'Powered by the thing that holds all things together in the universe.', 'x3po-powered-by' ),
+			__( 'Powered by crazy 🤔 and passion.', 'x3po-powered-by' ),
+		//	__( 'Powered by the thing that holds all things together in the universe.', 'x3po-powered-by' ),
 			__( 'Powered by ❤️.', 'x3po-powered-by' ),
-			__( 'Powered by the vast and endless void.', 'x3po-powered-by' ),
-			__( 'Powered by the code of a maniac.', 'x3po-powered-by' ),
+		//	__( 'Powered by the vast and endless void.', 'x3po-powered-by' ),
+		//	__( 'Powered by the code of a maniac.', 'x3po-powered-by' ),
 			__( 'Powered by ☮️ and understanding.', 'x3po-powered-by' ),
 			__( 'Powered by ☕.', 'x3po-powered-by' ),
 			__( 'Powered by sleepless 🌛.', 'x3po-powered-by' ),
 			__( 'Powered by ❤️ for all things.', 'x3po-powered-by' ),
-			__( 'Powered by something greater than myself.', 'x3po-powered-by' ),
+		//	__( 'Powered by something greater than myself.', 'x3po-powered-by' ),
 			// 2022-10-05 - @justintadlock
-			__( 'Powered by elbow grease. Held together by tape and bubble gum.', 'x3po-powered-by' ),
+		//	__( 'Powered by elbow grease. Held together by tape and bubble gum.', 'x3po-powered-by' ),
 			__( 'Powered by an old mix 💿 and memories of 💔.', 'x3po-powered-by' ),
 			__( 'Powered by thoughts of old 💌.', 'x3p0-powered-by' )
 		];
 	}
 
 	/**
-	 * Returns the text when object is used as a string.
+	 * Returns the message.
 	 *
 	 * @since 1.0.0
 	 */
-	public function __toString(): string
+	public function text( string $type = '' ): string
 	{
-		return $this->text();
+		$collection = 'emoji' === $type
+		              ? $this->messages['emoji']
+			      : $this->messages['default'];
+
+		return $collection[ array_rand( $collection, 1 ) ];
+	}
+
+	/**
+	 * Returns the default messages.
+	 *
+	 * @since 1.0.0
+	 */
+	public function messages(): array
+	{
+		return $this->messages;
 	}
 }

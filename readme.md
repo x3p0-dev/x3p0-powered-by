@@ -1,8 +1,10 @@
 # X3P0 Powered By
 
-Block that displays a random "powered by" message.
+Block that displays a random "powered by" message, such as:
 
-**To-do:** Randomly generate message in editor.
+> Powered by ☕.
+
+It is a fun spin the typical "Powered by Theme/WordPress" shown in website footers.  PRs to add other fun messages are welcome.
 
 ## Copyright and License
 

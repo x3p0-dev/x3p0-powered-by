@@ -4,13 +4,13 @@
 	"name": "x3p0/powered-by",
 	"version": "1.0.0-alpha",
 	"title": "X3P0 - Powered By",
-	"category": "theme",
+	"category": "widgets",
 	"icon": "comments",
 	"description": "Displays a random \"powered by\" message.",
 	"attributes": {
 		"poweredByType": {
 			"type": "string",
-			"default": "default"
+			"default": ""
 		},
 		"textAlign": {
 			"type": "string"
@@ -59,7 +59,7 @@
 			}
 		}
 	},
-	"textdomain": "x3p0-comments-title",
+	"textdomain": "x3p0-powered-by",
 	"editorScript": "file:./index.js",
 	"style": "file:./style-index.css"
 }
