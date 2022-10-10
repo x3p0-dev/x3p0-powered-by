@@ -1,54 +1,28 @@
 === X3P0 - Powered By ===
 Contributors:      greenshady
-Tags:              block
+Tags:              blocks, gutenberg
 Tested up to:      6.1
 Stable tag:        1.0.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Displays a comment parent link.
+A fun block for displaying a random "Powered By" message.
 
 == Description ==
 
-Block that displays a random "powered by" message, such as:
+A block that generates a random "Powered by" message. It is meant to replace the typical "Powered by Theme/WordPress" message in footers but can be used anywhere.
+
+Some examples:
+
+> Powered by coffee.
+> Powered by crazy ideas and passion.
+> Powered by heart and soul.
+
+The default messages are shown in plain text, but you can "emojify" them, like so:
 
 > Powered by ☕.
-
-It is a fun spin the typical "Powered by Theme/WordPress" shown in website footers.  PRs to add other fun messages are welcome.
-
-== Installation ==
-
-This section describes how to install the plugin and get it working.
-
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
-
-== Frequently Asked Questions ==
-
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
-
-== Screenshots ==
-
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+> Powered by crazy 🤔 and passion.
+> Powered by ❤️ and soul.
 
 == Changelog ==
 
-= 1.0.0-alpha =
-* Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+Please see the `changelog.md` file included with the plugin file.  Or, you can view the [online change log](https://github.com/x3p0-dev/x3p0-powered-by/blob/master/changelog.md).

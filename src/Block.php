@@ -16,15 +16,32 @@ use WP_Block;
 
 class Block
 {
+	/**
+	 * Stores the plugin path.
+	 *
+	 * @since 1.0.0
+ 	 * @todo  Move this to the constructor with PHP 8-only support.
+	 */
+	protected string $path;
+
+	/**
+	 * Stores the plugin path.
+	 *
+	 * @since 1.0.0
+ 	 * @todo  Move this to the constructor with PHP 8-only support.
+	 */
+	protected Superpower $superpower;
+
         /**
          * Sets up object state.
          *
          * @since 1.0.0
          */
-        public function __construct(
-		protected string $path,
-		protected Superpower $superpower
-	) {}
+        public function __construct( string $path, Superpower $superpower )
+	{
+		$this->path       = $path;
+		$this->superpower = $superpower;
+	}
 
         /**
          * Boots the component, running its actions/filters.

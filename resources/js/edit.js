@@ -61,27 +61,25 @@ export default function Edit( {
 	const [ message, setMessage ] = useState( getMessage( poweredByType ) );
 
 	// Block toolbar group.
-	const blockControlsBlock = (
-		<BlockControls group="block">
-			<AlignmentControl
-				value={ textAlign }
-				onChange={ ( value ) =>
-					setAttributes( { textAlign: value } )
-				}
-			/>
-		</BlockControls>
-	);
-
-	// Other toolbar group.
-	const blockControlsOther = (
-		<BlockControls group="other">
-			<ToolbarButton
-				icon={ refreshIcon }
-				label={ __( 'Refresh Message', 'x3p0-powered-by' ) }
-				onClick={ () => setMessage( getMessage( poweredByType ) ) }
-			/>
-		</BlockControls>
-
+	// @link https://github.com/WordPress/gutenberg/blob/trunk/packages/block-editor/src/components/block-controls/groups.js
+	const blockControls = (
+		<>
+			<BlockControls group="block">
+				<AlignmentControl
+					value={ textAlign }
+					onChange={ ( value ) =>
+						setAttributes( { textAlign: value } )
+					}
+				/>
+			</BlockControls>
+			<BlockControls group="other">
+				<ToolbarButton
+					icon={ refreshIcon }
+					label={ __( 'Refresh Message', 'x3p0-powered-by' ) }
+					onClick={ () => setMessage( getMessage( poweredByType ) ) }
+				/>
+			</BlockControls>
+		</>
 	);
 
 	// Displays our custom settings in the block inspector.
@@ -112,8 +110,7 @@ export default function Edit( {
 
 	return (
 		<>
-			{ blockControlsBlock }
-			{ blockControlsOther }
+			{ blockControls }
 			{ inspectorControls }
 			<div { ...blockProps }>
 				{ message }

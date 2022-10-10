@@ -15,9 +15,11 @@ namespace X3P0\PoweredBy;
  * without using the singleton pattern and gives third-party devs easy access to
  * the objects if they need to unhook actions/filters added by the classes.
  *
- * @since 1.0.0
+ * @since  1.0.0
+ * @return mixed
+ * @todo   Add return type declaration with PHP 8-only support.
  */
-function plugin( string $abstract = '' ): mixed
+function plugin( string $abstract = '' )
 {
         static $bindings = [];
 

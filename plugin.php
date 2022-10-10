@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name:       X3P0 - Powered By...
+ * Plugin Name:       X3P0 - Powered By
  * Plugin URI:        https://github.com/x3p0-dev/x3p0-powered-by
  * Description:       A block that generates a random "Powered by" message. It is meant to replace the typical "Powered by Theme/WordPress" message in footers but can be used anywhere.
- * Version:           1.0.0-alpha
+ * Version:           1.0.0
  * Requires at least: 5.9
- * Requires PHP:      8.0
+ * Requires PHP:      7.4
  * Author:            Justin Tadlock
- * Author URI:        https://x3p0.com
+ * Author URI:        https://justintadlock.com
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       x3p0-powered-by
  */

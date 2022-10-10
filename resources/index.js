@@ -10,18 +10,14 @@
 // Import stylesheets.
 import './css/style.scss';
 
-// Internal dependencies.
-import { blockIcon } from './js/icons';
-import blockEdit from './js/edit';
-import blockSave from './js/save';
-import blockData from './block.json';
-
-// WordPress dependencies.
+// Import dependencies.
 import { registerBlockType } from '@wordpress/blocks';
+import { blockIcon }         from './js/icons';
+import blockEdit             from './js/edit';
+import blockData             from './block.json';
 
 // Register block type.
 registerBlockType( blockData, {
 	icon: blockIcon,
-	edit: blockEdit,
-	save: blockSave
+	edit: blockEdit
 } );
