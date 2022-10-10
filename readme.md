@@ -4,15 +4,15 @@ A block that generates a random "Powered by" message. It is meant to replace the
 
 Some examples:
 
-> Powered by coffee.
-> Powered by crazy ideas and passion.
-> Powered by heart and soul.
+- Powered by coffee.
+- Powered by crazy ideas and passion.
+- Powered by heart and soul.
 
 The default messages are shown in plain text, but you can "emojify" them, like so:
 
-> Powered by ☕.
-> Powered by crazy 🤔 and passion.
-> Powered by ❤️ and soul.
+- Powered by ☕.
+- Powered by crazy 🤔 and passion.
+- Powered by ❤️ and soul.
 
 ## Copyright and License
 
