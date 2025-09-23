@@ -1,13 +1,12 @@
 <?php
+
 /**
  * Block class.
  *
- * Registers and renders the block type on the front end.
- *
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2022, Justin Tadlock
- * @link      https://github.com/x3p0-dev/x3p0-powered-by
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * @link      https://github.com/x3p0-dev/x3p0-powered-by
  */
 
 declare(strict_types=1);
@@ -38,9 +37,15 @@ class Register
 	 */
         public function register(): void
         {
-                register_block_type($this->path, [
-                        'render_callback' => [ $this, 'render' ]
-                ]);
+		wp_register_block_types_from_metadata_collection(
+			$this->path,
+			"{$this->path}/manifest.php"
+		);
+
+		wp_set_script_translations(
+			generate_block_asset_handle('x3p0/powered-by', 'editorScript'),
+			'x3p0-powered-by'
+		);
 
 		wp_localize_script(
 			generate_block_asset_handle('x3p0/powered-by', 'editorScript'),

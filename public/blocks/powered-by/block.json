@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "x3p0/powered-by",
+  "version": "1.0.0",
+  "title": "Powered By",
+  "category": "widgets",
+  "icon": "comments",
+  "description": "Displays a random \"powered by\" message.",
+  "textdomain": "x3p0-powered-by",
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "attributes": {
+    "poweredByType": {
+      "type": "string",
+      "default": "text"
+    }
+  },
+  "supports": {
+    "anchor": false,
+    "align": true,
+    "html": false,
+    "__experimentalBorder": {
+      "radius": true,
+      "color": true,
+      "width": true,
+      "style": true
+    },
+    "color": {
+      "gradients": true
+    },
+    "shadow": true,
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "margin": false,
+        "padding": true
+      }
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "textAlign": true,
+      "__experimentalFontStyle": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalTextTransform": true
+    }
+  }
+}

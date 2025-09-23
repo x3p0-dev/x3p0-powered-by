@@ -8,16 +8,16 @@
  */
 
 // Import stylesheets.
-import './css/style.scss';
+import './scss/style.scss';
 
 // Import dependencies.
 import { registerBlockType } from '@wordpress/blocks';
-import { blockIcon }         from './js/icons';
-import blockEdit             from './js/edit';
+import { cupHotFillIcon }    from './js/icons';
+import blockEdit             from './js/block-edit';
 import blockData             from './block.json';
 
 // Register block type.
 registerBlockType( blockData, {
-	icon: blockIcon,
+	icon: cupHotFillIcon,
 	edit: blockEdit
 } );
