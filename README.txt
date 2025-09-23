@@ -1,11 +1,11 @@
-=== X3P0 Powered By ===
+=== Powered By Block ===
 
 Contributors: greenshady
 Tags: block, blocks, gutenberg
-Requires at least: 6.0
-Tested up to: 6.1
-Requires PHP: 7.4
-Stable tag: 1.0.0
+Requires at least: 6.8
+Tested up to: 6.8
+Requires PHP: 8.0
+Stable tag: 2.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,10 @@ The default messages are shown in plain text, but you can "emojify" them, like s
 - Powered by ☕.
 - Powered by crazy 🤔 and passion.
 - Powered by ❤️ and soul.
+
+== Screenshots ==
+
+1. Editing the Powered By block.
 
 == Changelog ==
 
