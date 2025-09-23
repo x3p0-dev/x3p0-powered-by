@@ -1,4 +1,6 @@
-# X3P0 Powered By
+# X3P0: Powered By
+
+![Decorative plugin banner image that has a screenshot of the "powered by" block within it.](/.wporg/banner-1544x500.png)
 
 A block that generates a random "Powered by" message. It is meant to replace the typical "Powered by Theme/WordPress" message in footers but can be used anywhere.
 
