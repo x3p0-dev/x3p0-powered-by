@@ -21,9 +21,9 @@ namespace X3P0\PoweredBy;
 defined('ABSPATH') || exit;
 
 # Load classes and files.
-require_once 'src/Superpower.php';
 require_once 'src/Block/PoweredBy.php';
 require_once 'src/Block/Register.php';
+require_once 'src/Tools/Superpower.php';
 
 # Bootstrap the plugin
 add_action(

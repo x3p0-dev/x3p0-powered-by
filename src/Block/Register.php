@@ -13,9 +13,11 @@ declare(strict_types=1);
 
 namespace X3P0\PoweredBy\Block;
 
-use WP_Block;
-use X3P0\PoweredBy\Superpower;
+use X3P0\PoweredBy\Tools\Superpower;
 
+/**
+ * Registers the `x3p0/powered-by` block with WordPress.
+ */
 class Register
 {
         /**
@@ -50,34 +52,7 @@ class Register
 		wp_localize_script(
 			generate_block_asset_handle('x3p0/powered-by', 'editorScript'),
 			'x3p0PoweredBy',
-			[ 'messages' => (new Superpower())->messages() ]
+			[ 'messages' => Superpower::messages() ]
 		);
-        }
-
-	/**
-	 * Renders the block on the front end.
-	 *
-	 * @since 1.0.0
-	 */
-        public function render(array $attr, string $content, WP_Block $block): string
-        {
-		$attr = array_merge([
-			'textAlign'     => '',
-			'poweredByType' => ''
-		], $attr);
-
-		// Build text align class.
-		$align = empty($attr['textAlign'])
-		         ? ''
-			 : "has-text-align-{$attr['textAlign']}";
-
-		// Return the formatted block output.
-                return sprintf(
-                        '<div %s>%s</div>',
-                        get_block_wrapper_attributes([
-                                'class' => esc_attr($align)
-                        ]),
-			esc_html((new Superpower())->render($attr['poweredByType']))
-               );
         }
 }

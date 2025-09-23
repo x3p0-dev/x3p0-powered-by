@@ -13,29 +13,33 @@ declare(strict_types=1);
 
 namespace X3P0\PoweredBy\Block;
 
-use X3P0\PoweredBy\Superpower;
+use X3P0\PoweredBy\Tools\Superpower;
 
+/**
+ * Front-end handling of the `x3p0/powered-by` block.
+ */
 class PoweredBy
 {
+	/**
+	 * Sets up object state.
+	 */
 	public function __construct(protected array $attributes = [])
 	{}
 
+	/**
+	 * Renders the block on the front end.
+	 */
 	public function render(): string
 	{
 		$this->attributes = wp_parse_args($this->attributes, [
-			'textAlign'     => '',
 			'poweredByType' => ''
 		]);
 
 		// Return the block output.
 		return sprintf(
 			'<p %s>%s</p>',
-			get_block_wrapper_attributes([
-				'class' => $this->attributes['textAlign']
-					? esc_attr("has-text-align-{$this->attributes['textAlign']}")
-					: ''
-			]),
-			esc_html((new Superpower())->render($this->attributes['poweredByType']))
+			get_block_wrapper_attributes(),
+			esc_html(Superpower::render($this->attributes['poweredByType']))
 		);
 	}
 }
