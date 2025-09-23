@@ -13,12 +13,20 @@
  * Text Domain:       x3p0-powered-by
  */
 
+declare(strict_types=1);
+
 namespace X3P0\PoweredBy;
 
-// Load classes and files.
-require_once 'src/Block.php';
-require_once 'src/Superpower.php';
-require_once 'src/functions-helpers.php';
+# Prevent direct access.
+defined('ABSPATH') || exit;
 
-// Bootstrap the plugin.
-plugin();
+# Load classes and files.
+require_once 'src/Superpower.php';
+require_once 'src/Block/Register.php';
+
+# Bootstrap the plugin
+add_action(
+	'plugins_loaded',
+	fn() => (new Block\Register(__DIR__ . '/public'))->boot(),
+	PHP_INT_MIN
+);
