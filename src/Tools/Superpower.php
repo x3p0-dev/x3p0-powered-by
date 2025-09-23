@@ -55,9 +55,11 @@ class Superpower
 				__('Powered by elbow grease. Held together by tape and bubble gum.', 'x3p0-powered-by'),
 				__('Powered by an old mixtape and memories of lost love.', 'x3p0-powered-by'),
 				__('Powered by thoughts of old love letters.', 'x3p0-powered-by'),
-				// 2025-08-02
+				// 2025-08-02 - @justintadlock
 				__('Powered by coffee and doughnuts.', 'x3p0-powered-by'),
-				__('Powered by music that speaks to my soul.', 'x3p0-powered-by')
+				__('Powered by music that speaks to my soul.', 'x3p0-powered-by'),
+				// 2025-09-23 - @cre8tivediva
+				__('Powered by cornbread and potatoes.', 'x3p0-powered-by')
 			];
 
 			// @todo Come up with emoji equivalents for the messages that
@@ -73,9 +75,11 @@ class Superpower
 				// 2022-10-05 - @justintadlock
 				__('Powered by an old mix 💿 and memories of 💔.', 'x3p0-powered-by'),
 				__('Powered by thoughts of old 💌.', 'x3p0-powered-by'),
-				// 2025-08-02
+				// 2025-08-02 - @justintadlock
 				__('Powered by ☕ and 🍩.', 'x3p0-powered-by'),
-				__('Powered by 🎶 that speaks to my soul.', 'x3p0-powered-by')
+				__('Powered by 🎶 that speaks to my soul.', 'x3p0-powered-by'),
+				// 2025-09-23 - @cre8tivediva
+				__('Powered by 🌽🍞 and 🥔.', 'x3p0-powered-by'),
 			];
 
 			// Add your own superpowers!
