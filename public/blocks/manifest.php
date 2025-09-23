@@ -21,7 +21,7 @@ return array(
 			)
 		),
 		'supports' => array(
-			'anchor' => false,
+			'anchor' => true,
 			'align' => true,
 			'html' => false,
 			'__experimentalBorder' => array(
