@@ -16,7 +16,9 @@
 		"@wordpress/blocks": "^15.4.0",
 		"@wordpress/components": "^30.4.0",
 		"@wordpress/element": "^6.31.0",
-		"@wordpress/i18n": "^6.4.0",
+		"@wordpress/i18n": "^6.4.0"
+	},
+	"devDependencies": {
 		"@wordpress/scripts": "^30.24.0"
 	}
 }
