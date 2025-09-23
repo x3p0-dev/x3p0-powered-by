@@ -20,4 +20,4 @@ The default messages are shown in plain text, but you can "emojify" them, like s
 
 X3P0 Powered By is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html), version 2 or later.
 
-2022 &copy; [Justin Tadlock](https://justintadlock.com).
+2022-2025 &copy; [Justin Tadlock](https://justintadlock.com).
