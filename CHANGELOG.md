@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com), and this 
 ### Added
 
 - New `Block` interface for standardizing how blocks are output on the front end.
+- New cornbread and potatoes superpower.
 
 ### Changed
 
