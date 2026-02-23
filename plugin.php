@@ -24,9 +24,9 @@ defined('ABSPATH') || exit;
 require_once 'src/Block/Block.php';
 require_once 'src/Block/BlockRegistrar.php';
 require_once 'src/Block/Type/PoweredBy.php';
-require_once 'src/Tools/Superpower.php';
+require_once 'src/Support/Superpower.php';
 
-# Bootstrap the plugin
+# Bootstrap the plugin.
 add_action(
 	'plugins_loaded',
 	fn() => (new Block\BlockRegistrar(__DIR__ . '/public/blocks'))->boot(),

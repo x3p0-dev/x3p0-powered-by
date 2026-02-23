@@ -15,7 +15,7 @@ namespace X3P0\PoweredBy\Type\Block;
 
 use WP_Block;
 use X3P0\PoweredBy\Block\Block;
-use X3P0\PoweredBy\Tools\Superpower;
+use X3P0\PoweredBy\Support\Superpower;
 
 /**
  * Front-end handling of the `x3p0/powered-by` block.

@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace X3P0\PoweredBy\Block;
 
-use X3P0\PoweredBy\Tools\Superpower;
+use X3P0\PoweredBy\Support\Superpower;
 
 /**
  * Registers the `x3p0/powered-by` block with WordPress.

@@ -10,7 +10,7 @@
 
 declare(strict_types=1);
 
-namespace X3P0\PoweredBy\Tools;
+namespace X3P0\PoweredBy\Support;
 
 /**
  * Generates a random "powered by" message.
