@@ -22,13 +22,13 @@ defined('ABSPATH') || exit;
 
 # Load classes and files.
 require_once 'src/Block/Block.php';
-require_once 'src/Block/Register.php';
+require_once 'src/Block/BlockRegistrar.php';
 require_once 'src/Block/Type/PoweredBy.php';
 require_once 'src/Tools/Superpower.php';
 
 # Bootstrap the plugin
 add_action(
 	'plugins_loaded',
-	fn() => (new Block\Register(__DIR__ . '/public/blocks'))->boot(),
+	fn() => (new Block\BlockRegistrar(__DIR__ . '/public/blocks'))->boot(),
 	PHP_INT_MIN
 );

@@ -18,18 +18,23 @@ use X3P0\PoweredBy\Tools\Superpower;
 /**
  * Registers the `x3p0/powered-by` block with WordPress.
  */
-class Register
+class BlockRegistrar
 {
-        /**
-         * Sets up object state.
-         */
-        public function __construct(protected string $path)
+	/**
+	 * Filename of the blocks manifest.
+	 */
+	private const MANIFEST_FILENAME = 'manifest.php';
+
+	/**
+	 * Sets the path where the built blocks are stored.
+	 */
+	public function __construct(protected readonly string $path)
 	{}
 
-        /**
-         * Boots the component, running its actions/filters.
-         */
-        public function boot(): void
+	/**
+	 * Boots the component, running its actions/filters.
+	 */
+	public function boot(): void
         {
                 add_action('init', [$this, 'register']);
         }
@@ -41,7 +46,7 @@ class Register
         {
 		wp_register_block_types_from_metadata_collection(
 			$this->path,
-			"{$this->path}/manifest.php"
+			"{$this->path}/" . self::MANIFEST_FILENAME
 		);
 
 		wp_set_script_translations(
