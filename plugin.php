@@ -30,5 +30,5 @@ require_once 'src/Tools/Superpower.php';
 add_action(
 	'plugins_loaded',
 	fn() => (new Block\BlockRegistrar(__DIR__ . '/public/blocks'))->boot(),
-	PHP_INT_MIN
+	999999
 );
