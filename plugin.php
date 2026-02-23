@@ -5,7 +5,7 @@
  * Description:       A block that generates a random "Powered by" message. It is meant to replace the typical "Powered by Theme/WordPress" message in footers but can be used anywhere.
  * Version:           2.0.0
  * Requires at least: 6.8
- * Requires PHP:      8.0
+ * Requires PHP:      8.1
  * Author:            Justin Tadlock
  * Author URI:        https://justintadlock.com
  * License:           GPL-2.0-or-later
