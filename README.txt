@@ -1,4 +1,4 @@
-=== Powered By Block ===
+=== X3P0: Powered By ===
 
 Contributors: greenshady
 Tags: block, blocks, gutenberg
