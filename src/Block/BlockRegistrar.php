@@ -36,22 +36,17 @@ class BlockRegistrar
 	 */
 	public function boot(): void
         {
-                add_action('init', [$this, 'register']);
+                add_action('init', $this->register(...));
         }
 
 	/**
 	 * Registers the block with WordPress.
 	 */
-        public function register(): void
+        private function register(): void
         {
 		wp_register_block_types_from_metadata_collection(
 			$this->path,
 			"{$this->path}/" . self::MANIFEST_FILENAME
-		);
-
-		wp_set_script_translations(
-			generate_block_asset_handle('x3p0/powered-by', 'editorScript'),
-			'x3p0-powered-by'
 		);
 
 		wp_localize_script(
