@@ -20,7 +20,7 @@ use X3P0\PoweredBy\Tools\Superpower;
 /**
  * Front-end handling of the `x3p0/powered-by` block.
  */
-class PoweredBy implements Block
+final class PoweredBy implements Block
 {
 	/**
 	 * Renders the block on the front end.

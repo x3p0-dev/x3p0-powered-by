@@ -18,7 +18,7 @@ use X3P0\PoweredBy\Tools\Superpower;
 /**
  * Registers the `x3p0/powered-by` block with WordPress.
  */
-class BlockRegistrar
+final class BlockRegistrar
 {
 	/**
 	 * Filename of the blocks manifest.
