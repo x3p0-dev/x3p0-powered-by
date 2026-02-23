@@ -11,27 +11,23 @@
 
 declare(strict_types=1);
 
-namespace X3P0\PoweredBy\Block;
+namespace X3P0\PoweredBy\Type\Block;
 
+use WP_Block;
+use X3P0\PoweredBy\Block\Block;
 use X3P0\PoweredBy\Tools\Superpower;
 
 /**
  * Front-end handling of the `x3p0/powered-by` block.
  */
-class PoweredBy
+class PoweredBy implements Block
 {
-	/**
-	 * Sets up object state.
-	 */
-	public function __construct(protected array $attributes = [])
-	{}
-
 	/**
 	 * Renders the block on the front end.
 	 */
-	public function render(): string
+	public function render(array $attributes, string $content, WP_Block $block): string
 	{
-		$this->attributes = wp_parse_args($this->attributes, [
+		$attributes = wp_parse_args($attributes, [
 			'poweredByType' => ''
 		]);
 
@@ -39,7 +35,7 @@ class PoweredBy
 		return sprintf(
 			'<p %s>%s</p>',
 			get_block_wrapper_attributes(),
-			esc_html(Superpower::render($this->attributes['poweredByType']))
+			esc_html(Superpower::render($attributes['poweredByType']))
 		);
 	}
 }
